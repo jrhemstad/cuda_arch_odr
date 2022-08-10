@@ -11,13 +11,8 @@ The answer appears to be very complicated and depends on a relationship among:
 - static vs anonymous namespace used for internal linkage!?
 
 Naively, you might expect simply marking the kernel to have internal linkage by annotating it with `static` would resolve the issue, but it *does not*. 
-It is much more complicated than that and depends on the linkage of the
-enclosing function.
+It appears to also depend on the linkage of the enclosing function.
 
-Furthermore, much to my surprise, there is an observable difference in 
-behavior between when the enclosing function is annotated with `static` vs
-enclosed in an anonymous namespace. AFAIK, these should be equivalent forms
-of giving a function internal linkage, but they behave differently. See table:
 
 | Works? |  Linker | kernel() annotation | test()  | test() anon namespace |
 |:------:|:-------:|:-------------------:|:-------:|:---------------------:|
