@@ -1,8 +1,9 @@
 
 #include <cstdio>
 
-extern int A();
-extern int B();
+// For conveience, forward declare functions instead of needing extra headers
+int A();
+int B();
 
 int main() {
   int a = A();
