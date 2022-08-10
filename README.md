@@ -8,7 +8,6 @@ The answer appears to be very complicated and depends on a relationship among:
 - Static vs Dynamic linking
 - Internal vs External kernel linkage 
 - Internal vs External linkage of function ODR-using the kernel
-- static vs anonymous namespace used for internal linkage!?
 
 Naively, you might expect simply marking the kernel to have internal linkage by annotating it with `static` would resolve the issue, but it *does not*. 
 It appears to also depend on the linkage of the enclosing function.
